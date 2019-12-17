@@ -1,12 +1,9 @@
 import React from 'react'
 import styled from 'styled-components/macro';
+import NavBar from 'components/common/NavBar'
 
 const Container = styled.div``;
 const ChildrenContainer = styled.div``;
-
-const NavBar = () => {
-	return <div>nav</div>
-}
 
 const Footer = () => {
 	return <div>footer</div>
