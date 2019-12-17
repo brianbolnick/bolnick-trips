@@ -1,7 +1,12 @@
 import React from 'react'
+import Layout from 'components/common/Layout'
 
 const Unauthorized = () => {
-	return <div>CAN'T SEE ME BRO</div>
+	return (
+		<Layout>
+			<div>CAN'T SEE ME BRO</div>
+		</Layout>
+	)
 }
 
 export default Unauthorized 

@@ -1,7 +1,12 @@
 import React from 'react'
+import Layout from 'components/common/Layout'
 
-const Home = () => {
-	return <div>HEY</div>
+const Profile = () => {
+	return (
+		<Layout>
+			<div>HEY</div>
+		</Layout>
+	)
 }
 
-export default Home
+export default Profile
