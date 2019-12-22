@@ -2,9 +2,10 @@ import { css, keyframes } from "styled-components";
 
 // Fonts
 export const avenir = "'Avenir Next', sans-serif";
+export const titan = " 'Titan One', cursive;";
 
 //colors
-export { default as colors } from './colors'
+export { default as colors } from "./colors";
 
 // Responsive design
 export const phoneMediaQuery = "max-width: 768px";

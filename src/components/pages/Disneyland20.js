@@ -1,12 +1,9 @@
 import React from "react";
-import Layout from "components/common/Layout";
+import Trip from "components/common/Trip";
+import { disneyland20 } from "./tripsConfig";
 
 const Disneyland20 = () => {
-  return (
-    <Layout>
-      <div>HEY</div>
-    </Layout>
-  );
+  return <Trip trip={disneyland20} />;
 };
 
 export default Disneyland20;

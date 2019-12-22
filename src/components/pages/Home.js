@@ -1,48 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components/macro";
-import { colors } from "styles/css-variables";
+import { media, titan, colors } from "styles/css-variables";
+import tripConfig from "./tripsConfig";
+import TripCard from "components/common/TripCard";
 
-const linkCss = css`
-  text-decoration: none;
-  color: ${colors.black};
-`;
-const SiteLink = styled(Link)`
-  ${linkCss};
-`;
-
-const SiteAnchor = styled.a`
-  ${linkCss};
-`;
-
-const Layout = styled.div`
+const TripsContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 100vh;
-`;
+  width: 50%;
+  margin: 0 auto;
+  height: 100%;
 
-const SitesContainer = styled.div`
-  display: flex;
-  flex-flow: column;
+  ${media.smallDesktop`
+		flex-flow: column;
+		flex-wrap: wrap;
+		width: 90%;
+  margin: 84px auto;
+	`};
 `;
 
 const Home = () => {
-  return (
-    <Layout>
-      <SitesContainer>
-        <SiteAnchor
-          href="//our-europe-trip.herokuapp.com"
-          target="_blank"
-          rel="noopener"
-        >
-          EUROPE 2018
-        </SiteAnchor>
-        <SiteLink to="/disneyland20">DISNEYLAND 2020</SiteLink>
-      </SitesContainer>
-    </Layout>
-  );
+  const renderTrips = () => tripConfig.map(trip => <TripCard trip={trip} />);
+
+  return <TripsContainer>{renderTrips()}</TripsContainer>;
 };
 
 export default Home;
