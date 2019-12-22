@@ -1,13 +1,41 @@
 import React, { useState } from "react";
 import Layout from "components/common/Layout";
 import { Tabs, Tab, TabPane } from "components/common/Tabs";
-import { NavContainer, TabItem, TabItems } from "./TripStyles";
+import {
+  NavContainer,
+  TripDetails,
+  Title,
+  Dates,
+  Description,
+  TabItem,
+  TabItems
+} from "./TripStyles";
+import Day from "./Day";
 
-const ITINERARY = "ITINERARY";
-const BUDGET = "BUDGET";
+const DEFAULT_TAB = "day1";
 
 const Trip = ({ trip }) => {
-  const [activeTab, setActiveTab] = useState(ITINERARY);
+  const [activeTab, setActiveTab] = useState(DEFAULT_TAB);
+
+  const renderTabs = () => {
+    return trip.itinerary.map((_day, index) => {
+      return (
+        <Tab name={`day${index + 1}`}>
+          <TabItem>Day {index + 1}</TabItem>
+        </Tab>
+      );
+    });
+  };
+
+  const renderTabPanes = () => {
+    return trip.itinerary.map((day, index) => {
+      return (
+        <TabPane name={`day${index + 1}`}>
+          <Day day={day} />
+        </TabPane>
+      );
+    });
+  };
 
   return (
     <Layout>
@@ -16,16 +44,13 @@ const Trip = ({ trip }) => {
           defaultActiveTab={activeTab}
           onTabChange={tab => setActiveTab(tab)}
         >
-          <TabItems>
-            <Tab name={ITINERARY}>
-              <TabItem>Itinerary</TabItem>
-            </Tab>
-            <Tab name={BUDGET}>
-              <TabItem>Budget</TabItem>
-            </Tab>
-          </TabItems>
-          <TabPane name={ITINERARY}>itinerary</TabPane>
-          <TabPane name={BUDGET}>budget</TabPane>
+          <TabItems>{renderTabs()}</TabItems>
+          <TripDetails>
+            <Title>{trip.name}</Title>
+            <Dates>{trip.dates}</Dates>
+            <Description>{trip.description}</Description>
+          </TripDetails>
+          {renderTabPanes()}
         </Tabs>
       </NavContainer>
     </Layout>

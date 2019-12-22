@@ -7,7 +7,7 @@ const StyledTab = styled.div`
   margin-right: 16px;
   cursor: pointer;
   padding: 24px;
-  font-size: 40px;
+  font-size: 24px;
   text-transform: uppercase;
   font-weight: 700;
   font-family: ${avenir};
