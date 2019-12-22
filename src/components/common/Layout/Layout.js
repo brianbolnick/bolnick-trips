@@ -1,26 +1,14 @@
-import React from 'react'
-import styled from 'styled-components/macro';
-import NavBar from 'components/common/NavBar'
+import React from "react";
+import styled from "styled-components/macro";
 
 const Container = styled.div``;
 const ChildrenContainer = styled.div``;
-
-const Footer = () => {
-	return <div>footer</div>
-}
-
 const Layout = ({ children }) => {
-	return (
-		<Container>
-			<NavBar />
+  return (
+    <Container>
+      <ChildrenContainer>{children}</ChildrenContainer>
+    </Container>
+  );
+};
 
-			<ChildrenContainer>
-				{children}
-			</ChildrenContainer>
-
-			<Footer />
-		</Container>
-	)
-}
-
-export default Layout
+export default Layout;
