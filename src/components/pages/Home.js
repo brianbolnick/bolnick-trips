@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import styled, { css } from "styled-components/macro";
-import { media, titan, colors } from "styles/css-variables";
+import styled from "styled-components/macro";
+import { media } from "styles/css-variables";
 import tripConfig from "./tripsConfig";
 import TripCard from "components/common/TripCard";
 
@@ -17,7 +16,7 @@ const TripsContainer = styled.div`
 		flex-flow: column;
 		flex-wrap: wrap;
 		width: 90%;
-  margin: 84px auto;
+		margin: 84px auto;
 	`};
 `;
 

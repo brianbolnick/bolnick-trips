@@ -18,10 +18,10 @@ const Trip = ({ trip }) => {
         >
           <TabItems>
             <Tab name={ITINERARY}>
-              <TabItem active={activeTab === ITINERARY}>Itinerary</TabItem>
+              <TabItem>Itinerary</TabItem>
             </Tab>
             <Tab name={BUDGET}>
-              <TabItem active={activeTab === BUDGET}>Budget</TabItem>
+              <TabItem>Budget</TabItem>
             </Tab>
           </TabItems>
           <TabPane name={ITINERARY}>itinerary</TabPane>

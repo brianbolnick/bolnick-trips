@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, withRouter, Switch, Redirect } from "react-router-dom";
+import { Route, withRouter, Switch } from "react-router-dom";
 import Home from "components/pages/Home";
 import Unauthorized from "components/pages/static/Unauthorized";
 import NotFound from "components/pages/static/NotFound";
@@ -25,6 +25,7 @@ import Disneyland20 from "components/pages/Disneyland20";
 ///>
 //);
 //};
+//
 
 const App = ({ location }) => {
   return (

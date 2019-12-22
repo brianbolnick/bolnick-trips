@@ -12,10 +12,8 @@ import {
 
 const TripCard = ({ trip }) => {
   const WrapperComponent = ({ trip, children }) => {
-    if (trip.route) {
+    if (trip.route)
       return <LinkWrapper to={trip.route}>{children}</LinkWrapper>;
-    }
-
     return (
       <AnchorWrapper href={trip.link} target="_blank" rel="noopener">
         {children}

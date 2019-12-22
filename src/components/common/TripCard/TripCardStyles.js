@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components/macro";
 import { Link } from "react-router-dom";
-import { media, titan, colors } from "styles/css-variables";
+import { colors } from "styles/css-variables";
 
 const cardCSS = css`
   text-decoration: none;

@@ -1,17 +1,33 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { colors } from "styles/css-variables";
+import { colors, avenir } from "styles/css-variables";
 
 const StyledTab = styled.div`
   margin-right: 16px;
   cursor: pointer;
+  padding: 24px;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: ${avenir};
+  color: ${colors.white};
+  border-radius: 4px;
+
+  ${({ isActive }) =>
+    !isActive &&
+    `
+  &:hover {
+    background: #575d5f;;
+  }
+	`};
 
   ${({ isActive }) =>
     isActive &&
     `
-			border-bottom: solid 4px #6dd5ed;
-			padding-bottom: 4px;
+			color: ${colors.black};
+			background: ${colors.white};
+			box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)
 		`};
 `;
 

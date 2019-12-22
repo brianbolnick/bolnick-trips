@@ -1,6 +1,6 @@
 # Bolnick Trips
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/43aeaa16-55d5-49f0-9e0a-3cf128784304/deploy-status)](https://app.netlify.com/sites/jedi-games/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f67c5f51-5e91-4d1c-b82a-5a42ee6b93a5/deploy-status)](https://app.netlify.com/sites/bolnick-trips/deploys)
 
 A fun application for tracking personal trips and activities.
 
