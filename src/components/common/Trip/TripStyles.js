@@ -1,4 +1,5 @@
 import styled from "styled-components/macro";
+import { Link } from "react-router-dom";
 import { media, colors } from "styles/css-variables";
 
 export const TripDetails = styled.div`
@@ -30,4 +31,8 @@ export const TabItems = styled.div`
   ${media.phone`
 		flex-wrap: wrap;
 	`};
+`;
+
+export const HomeLink = styled(Link)`
+  color: ${colors.white};
 `;

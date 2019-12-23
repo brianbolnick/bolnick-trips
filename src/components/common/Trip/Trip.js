@@ -8,7 +8,8 @@ import {
   Dates,
   Description,
   TabItem,
-  TabItems
+  TabItems,
+  HomeLink
 } from "./TripStyles";
 import Day from "./Day";
 
@@ -20,7 +21,7 @@ const Trip = ({ trip }) => {
   const renderTabs = () => {
     return trip.itinerary.map((_day, index) => {
       return (
-        <Tab name={`day${index + 1}`}>
+        <Tab name={`day${index + 1}`} key={`tab${index}`}>
           <TabItem>Day {index + 1}</TabItem>
         </Tab>
       );
@@ -30,7 +31,7 @@ const Trip = ({ trip }) => {
   const renderTabPanes = () => {
     return trip.itinerary.map((day, index) => {
       return (
-        <TabPane name={`day${index + 1}`}>
+        <TabPane name={`day${index + 1}`} key={`pane${index}`}>
           <Day day={day} />
         </TabPane>
       );
@@ -39,6 +40,7 @@ const Trip = ({ trip }) => {
 
   return (
     <Layout>
+      <HomeLink to="/">Home</HomeLink>
       <NavContainer>
         <Tabs
           defaultActiveTab={activeTab}

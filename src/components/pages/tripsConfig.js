@@ -72,7 +72,7 @@ export const disneyland20 = {
     },
     {
       name: "Day 2",
-      date: "1/19/20",
+      date: "1/20/20",
       activities: [
         {
           type: "food",
