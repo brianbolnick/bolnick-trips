@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
+import { media } from "styles/css-variables";
 
 const Container = styled.div`
   height: 100%;
@@ -7,8 +8,12 @@ const Container = styled.div`
   padding: 64px 0;
 `;
 const ChildrenContainer = styled.div`
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
+
+  ${media.phone`
+		width: 90%;
+	`};
 `;
 
 const Layout = ({ children }) => {

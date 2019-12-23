@@ -6,8 +6,8 @@ import { colors, avenir } from "styles/css-variables";
 const StyledTab = styled.div`
   margin-right: 16px;
   cursor: pointer;
-  padding: 24px;
-  font-size: 24px;
+  padding: 16px;
+  font-size: 16px;
   text-transform: uppercase;
   font-weight: 700;
   font-family: ${avenir};

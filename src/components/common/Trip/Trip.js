@@ -44,12 +44,12 @@ const Trip = ({ trip }) => {
           defaultActiveTab={activeTab}
           onTabChange={tab => setActiveTab(tab)}
         >
-          <TabItems>{renderTabs()}</TabItems>
           <TripDetails>
             <Title>{trip.name}</Title>
             <Dates>{trip.dates}</Dates>
             <Description>{trip.description}</Description>
           </TripDetails>
+          <TabItems>{renderTabs()}</TabItems>
           {renderTabPanes()}
         </Tabs>
       </NavContainer>
