@@ -8,7 +8,7 @@ const Container = styled.div`
   padding: 64px 0;
 `;
 const ChildrenContainer = styled.div`
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
 
   ${media.phone`

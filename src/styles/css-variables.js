@@ -3,6 +3,7 @@ import { css, keyframes } from "styled-components";
 // Fonts
 export const avenir = "'Avenir Next', sans-serif";
 export const titan = " 'Titan One', cursive;";
+export const merriweather = "'Merriweather', serif;";
 
 //colors
 export { default as colors } from "./colors";

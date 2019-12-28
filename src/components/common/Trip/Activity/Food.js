@@ -1,12 +1,12 @@
 import React from "react";
-import { Container, Heading } from "./ActivityStyles";
+import { Container, Heading, Name, Time } from "./ActivityStyles";
 
 const Food = ({ activity }) => {
   return (
     <Container>
       <Heading>
-        <div>{activity.name}</div>
-        <div>{activity.startTime}</div>
+        <Name>{activity.name}</Name>
+        <Time>{activity.startTime}</Time>
       </Heading>
       <div>{activity.restaurant}</div>
       <div>{activity.location}</div>

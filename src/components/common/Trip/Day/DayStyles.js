@@ -23,7 +23,7 @@ export const Circle = styled.div`
   background: ${colors.gray};
 `;
 export const Line = styled.div`
-  width: 2px;
+  width: 1px;
   background: ${colors.gray};
   height: 100%;
 `;
